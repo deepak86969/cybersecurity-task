@@ -1,0 +1,18 @@
+# cybersecurity-task Steganography Tool for Image/File Hiding
+
+#Command-used
+
+steghide --help(
+ is a steganography tool in Linux used to hide files inside image or audio files (like JPEG, BMP, WAV, AU) and to extract hidden data from such files. It uses encryption and compression for security.
+)
+
+steghide embed -cf stone.jpeg-ef sample-data.csv(
+stone.jpeg: becomes a container with hidden data
+sample-data.csv: The image still looks normal but now contains data
+)
+
+steghide extract -sf stone.jpeg(
+Pulls out hidden file from image
+Asks for password (if set)
+Saves extracted file to current folder
+)
